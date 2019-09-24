@@ -5,8 +5,8 @@
 
 ## Authors
 
-- Driver    : abhi1625
-- Navigator : namangupta98
+- Driver    : [abhi1625](https://github.com/abhi1625)
+- Navigator : [namangupta98](https://github.com/namangupta8)
 
 ## Overview
 
