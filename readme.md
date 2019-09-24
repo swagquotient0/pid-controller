@@ -3,6 +3,11 @@
 [![Coverage Status](https://coveralls.io/repos/github/abhi1625/pid-controller/badge.svg?branch=master)](https://coveralls.io/github/abhi1625/pid-controller?branch=master)
 ---
 
+## Authors
+
+- Driver    : abhi1625
+- Navigator : namangupta98
+
 ## Overview
 
 Simple starter C++ project with:
