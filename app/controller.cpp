@@ -95,7 +95,7 @@ double PID::getDt() {
  *         given setpoint value within a set rise-time.
  */
 double PID::computePID(double setpointVel,  double actualVel) {
-    double err = 0.0;
+    double err = setpointVel - actualVel;
     double errDot = 0.0;
     errSum += err;
 
