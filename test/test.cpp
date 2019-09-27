@@ -22,7 +22,7 @@ TEST(paramsZero, shouldPass) {
   pid->setKi(0.0);
   ASSERT_EQ(0.0, pid->getKp());
   ASSERT_EQ(0.0, pid->getKd());
-  ASSERT_EQ(0.0, pid->getKi()); 
+  ASSERT_EQ(0.0, pid->getKi());
 }
 
 /**
@@ -31,8 +31,8 @@ TEST(paramsZero, shouldPass) {
  */
 TEST(computeZero, shouldPass) {
   std::shared_ptr<PID> pid = std::make_shared<PID>();
-  //expectedVal = 0.0 m/s,  setpointVel = 20 m/s, actualVel = 20 m/s
-  ASSERT_EQ(0.0, pid->computePID(20, 20)); 
+  // expectedVal = 0.0 m/s,  setpointVel = 20 m/s, actualVel = 20 m/s
+  ASSERT_EQ(0.0, pid->computePID(20, 20));
 }
 
 /**
@@ -47,5 +47,5 @@ TEST(computePID, shouldPass) {
   pid->setKi(0.01);
   pid->setDt(0.1);
   // expectedVal = 11.01 m/s, setpointVel = 20 m/s, actualVel = 20 m/s
-  EXPECT_NEAR(11.01, pid->computePID(20,10), 0.1);  // absErrorTolerance = 0.1 m/s 
+  EXPECT_NEAR(11.01, pid->computePID(20, 10), 0.1);  // absErrTolerance = 0.1m/s
 }

@@ -13,13 +13,13 @@
 /**
  * @brief default constructor
  */
-PID::PID(){ 
+PID::PID() {
 }
 
 /**
  * @brief default destructor
  */
-PID::~PID() { 
+PID::~PID() {
 }
 
 /**
@@ -27,7 +27,7 @@ PID::~PID() {
  * @param Kp - gain value Kp 
  */
 void PID::setKp(double kp) {
-    this->kp = kp;  //assign given value to the private variable kp
+    this->kp = kp;  // assign given value to the private variable kp
 }
 
 /**
@@ -35,7 +35,7 @@ void PID::setKp(double kp) {
  * @param Kd - gain value Kd 
  */ 
 void PID::setKd(double kd) {
-    this->kd = kd;  //assign given value to the private variable kd
+    this->kd = kd;  // assign given value to the private variable kd
 }
 
 /**
@@ -43,7 +43,7 @@ void PID::setKd(double kd) {
  * @param Ki - gain value Ki 
  */ 
 void PID::setKi(double ki) {
-    this->ki = ki;  //assign given value to the private variable ki
+    this->ki = ki;  // assign given value to the private variable ki
 }
 
 /**
@@ -51,7 +51,7 @@ void PID::setKi(double ki) {
  * @param dt - discretization time-step dt 
  */
 void PID::setDt(double dt) {
-    this->dt = dt;  //assign given value to the private variable dt
+    this->dt = dt;  // assign given value to the private variable dt
 }
 
 /**
@@ -59,7 +59,7 @@ void PID::setDt(double dt) {
  * @return Kp  
  */
 double PID::getKp() {
-    return kp;  
+    return kp;
 }
 
 /**

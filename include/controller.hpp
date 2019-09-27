@@ -18,8 +18,8 @@ using std :: cout;
 using std :: cin;
 using std :: endl;
 
-class PID{
-    public:
+class PID {
+ public:
         /**
          * @brief default constructor
          */
@@ -40,7 +40,7 @@ class PID{
          * @param Kp - gain value Kp 
          */
         void setKp(double Kp);
-        
+
         /**
          * @brief setKd sets the derivative gain Kd for the PID controller
          * @param Kd - gain value Kd 
@@ -52,7 +52,7 @@ class PID{
          * @param Ki - gain value Ki 
          */        
         void setKi(double Ki);
-        
+
         /**
          * @brief setDt sets the discretization time-step dt for the PID.         
          * @param dt - discretization time-step dt 
@@ -64,7 +64,7 @@ class PID{
          * @return Kp  
          */
         double getKp();
-        
+
         /**
          * @brief getKd provides access to private variable Kd.         
          * @return Kd  
@@ -76,7 +76,7 @@ class PID{
          * @return Ki  
          */
         double getKi();
-        
+
         /**
          * @brief getDt provides access to private variable dt.         
          * @return dt  
@@ -88,13 +88,13 @@ class PID{
          */
         ~PID();
 
-    private:
-        double kp=0.0;                  //proportianal gain term
-        double kd=0.0;                  //derivative gain term
-        double ki=0.0;                  //integral gain term
-        double dt = 1.0;                //discretization time-step
-        double prevErr = 0.0;           //error in the previous time step
-        double errSum = 0.0;            //cumulative error term  
+ private:
+        double kp = 0.0;                  // proportianal gain term
+        double kd = 0.0;                  // derivative gain term
+        double ki = 0.0;                  // integral gain term
+        double dt = 1.0;                // discretization time-step
+        double prevErr = 0.0;           // error in the previous time step
+        double errSum = 0.0;            // cumulative error term
 };
 
 #endif  // INCLUDE_CONTROLLER_HPP_

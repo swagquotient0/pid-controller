@@ -9,13 +9,12 @@
  */
 #include "../include/controller.hpp"
 
-int main()
-{
+int main() {
     std::shared_ptr<PID> pid = std::make_shared<PID>();
-    pid->setKp(0.5);                   //set Kp value
-    pid->setKd(0.01);                   //set Kd value 
-    pid->setKi(0.001);                  //set Ki value
-    pid->setDt(0.1);                    //set discretization time dt
+    pid->setKp(0.5);                    // set Kp value
+    pid->setKd(0.01);                   // set Kd value
+    pid->setKi(0.001);                  // set Ki value
+    pid->setDt(0.1);                    // set discretization time dt
 
     cout << "Kp is :" << pid->getKp() << endl;
     cout << "Kd is :" << pid->getKd() << endl;
@@ -24,14 +23,13 @@ int main()
     double actualVel = 10;
     double setpointVel = 20;
 
-    double velInc = 0;                  //initialize velocity increment
-    
-    int count = 0; 
+    int count = 0;
     while (count < 40) {
-        velInc = pid->computePID(setpointVel, actualVel);
+        // compute velocity increment
+        double velInc = pid->computePID(setpointVel, actualVel);
         count++;
-        
-        actualVel += velInc;            //increment velocity using PID output
+
+        actualVel += velInc;            // increment velocity using PID output
         cout << "actual vel " << actualVel << endl;
     }
 
