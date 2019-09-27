@@ -59,7 +59,7 @@ void PID::setDt(double dt) {
  * @return Kp  
  */
 double PID::getKp() {
-    return kp;
+    return this->kp;
 }
 
 /**
@@ -67,7 +67,7 @@ double PID::getKp() {
  * @return Kd  
  */
 double PID::getKd() {
-    return kd;
+    return this->kd;
 }
 
 /**
@@ -75,7 +75,7 @@ double PID::getKd() {
  * @return Ki  
  */
 double PID::getKi() {
-    return ki;
+    return this->ki;
 }
 
 /**
@@ -83,7 +83,7 @@ double PID::getKi() {
  * @return dt  
  */
 double PID::getDt() {
-    return dt;
+    return this->dt;
 }
 
 /**
