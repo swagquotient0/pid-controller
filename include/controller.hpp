@@ -37,27 +37,27 @@ class PID {
 
         /**
          * @brief setKp sets the proportional gain Kp for the PID controller
-         * @param Kp - gain value Kp 
+         * @param _Kp - gain value Kp 
          */
-        void setKp(double Kp);
+        void setKp(double _Kp);
 
         /**
          * @brief setKd sets the derivative gain Kd for the PID controller
-         * @param Kd - gain value Kd 
+         * @param _Kd - gain value Kd 
          */        
-        void setKd(double Kd);
+        void setKd(double _Kd);
 
         /**
          * @brief setKi sets the integral gain Ki for the PID controller
-         * @param Ki - gain value Ki 
+         * @param _Ki - gain value Ki 
          */        
-        void setKi(double Ki);
+        void setKi(double _Ki);
 
         /**
          * @brief setDt sets the discretization time-step dt for the PID.         
-         * @param dt - discretization time-step dt 
+         * @param _dt - discretization time-step dt 
          */
-        void setDt(double dt);
+        void setDt(double _dt);
 
         /**
          * @brief getKp provides access to private variable Kp.         
@@ -89,12 +89,12 @@ class PID {
         ~PID();
 
  private:
-        double kp = 0.0;                  // proportianal gain term
-        double kd = 0.0;                  // derivative gain term
-        double ki = 0.0;                  // integral gain term
-        double dt = 1.0;                // discretization time-step
-        double prevErr = 0.0;           // error in the previous time step
-        double errSum = 0.0;            // cumulative error term
+        double kp;                  // proportianal gain term
+        double kd;                  // derivative gain term
+        double ki;                  // integral gain term
+        double dt;                  // discretization time-step
+        double prevErr;             // error in the previous time step
+        double errSum;              // cumulative error term
 };
 
 #endif  // INCLUDE_CONTROLLER_HPP_

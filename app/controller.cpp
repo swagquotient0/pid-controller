@@ -13,7 +13,13 @@
 /**
  * @brief default constructor
  */
-PID::PID() {
+PID::PID()
+    : kp(0.0),
+      kd(0.0),
+      ki(0.0),
+      dt(1.0),
+      prevErr(0.0),
+      errSum(0.0) {
 }
 
 /**
@@ -26,32 +32,32 @@ PID::~PID() {
  * @brief setKp sets the proportional gain Kp for the PID controller
  * @param Kp - gain value Kp 
  */
-void PID::setKp(double kp) {
-    this->kp = kp;  // assign given value to the private variable kp
+void PID::setKp(double _kp) {
+    this->kp = _kp;  // assign given value to the private variable kp
 }
 
 /**
  * @brief setKd sets the derivative gain Kd for the PID controller
  * @param Kd - gain value Kd 
  */ 
-void PID::setKd(double kd) {
-    this->kd = kd;  // assign given value to the private variable kd
+void PID::setKd(double _kd) {
+    this->kd = _kd;  // assign given value to the private variable kd
 }
 
 /**
  * @brief setKi sets the integral gain Ki for the PID controller
  * @param Ki - gain value Ki 
  */ 
-void PID::setKi(double ki) {
-    this->ki = ki;  // assign given value to the private variable ki
+void PID::setKi(double _ki) {
+    this->ki = _ki;  // assign given value to the private variable ki
 }
 
 /**
  * @brief setDt sets the discretization time-step dt for the PID.         
  * @param dt - discretization time-step dt 
  */
-void PID::setDt(double dt) {
-    this->dt = dt;  // assign given value to the private variable dt
+void PID::setDt(double _dt) {
+    this->dt = _dt;  // assign given value to the private variable dt
 }
 
 /**
