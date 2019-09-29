@@ -10,7 +10,7 @@
 
 ## Overview
 
-Simple PID Controller for velocity control.
+Simple PID Controller for velocity control. The overview of the code implementation is explained in the [PID_UML_activity_diagram](https://github.com/abhi1625/pid-controller/blob/master/PID_UML_activity_diagram.pdf). More detailed explanation of the class implementation and required methods is available as [PID_UML_class_diagram](https://github.com/abhi1625/pid-controller/blob/master/PID_UML_class_diagram.pdf) and [computePID_UML_activity_diagram](https://github.com/abhi1625/pid-controller/blob/master/computePID_UML_activity_diagram.pdf).   
 
 ## Standard install via command-line
 ```
