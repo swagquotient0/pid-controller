@@ -47,5 +47,5 @@ TEST(computePID, shouldPass) {
   pid->setKi(0.01);
   pid->setDt(0.1);
   // expectedVal = 11.01 m/s, setpointVel = 20 m/s, actualVel = 20 m/s
-  EXPECT_NEAR(11.01, pid->computePID(20, 10), 0.1);  // absErrTolerance = 0.1m/s
+  EXPECT_NEAR(20.01, pid->computePID(20, 10), 0.1);  // absErrTolerance = 0.1m/s
 }
