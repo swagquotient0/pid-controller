@@ -102,8 +102,8 @@ double PID::getDt() {
  */
 double PID::computePID(double setpointVel,  double actualVel) {
     double err = setpointVel - actualVel;
-    double errDot = 0.0;
-    errSum += err;
+    double errDot = (err - prevErr) / dt;
+    errSum += err * dt;
 
     double ctrlInput = kp * err + kd * errDot + ki * errSum;
 
